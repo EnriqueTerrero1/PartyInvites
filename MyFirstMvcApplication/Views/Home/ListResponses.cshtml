@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+    <head>
+    <title>Response</title>
+     <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+
+    </head>
+    <body>
+         <div class="panel-body">
+
+        <h2>here is the list of people attending the party</h2>
+ <table class="table table-sm table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach ( PartyInvites.Models.GuestResponse r in Model)
+            {
+                <tr>
+                    <td>@r.name</td>
+                    <td>@r.email</td>
+                    <td>@r.phone</td>
+                </tr>
+            }
+        </tbody>
+        </table>
+    </body>
+</html>
